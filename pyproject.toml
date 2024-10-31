@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "igefa-scraper"
+version = "0.1.0"
+description = "Asynchronous scraper for https://store.igefa.de/"
+authors = ["OleksiiR <nick1nick@protonmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.10.10"
+aiofiles = "^24.1.0"
+beautifulsoup4 = "^4.12.3"
+lxml = "^5.3.0"
+pandas = "^2.2.3"
+tenacity = "^9.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
