@@ -65,8 +65,7 @@ class IgefaScraper:
             soup = BeautifulSoup(html, "lxml")
 
             category_links = soup.select(
-                "div.LYSTypography_color_inherit__25ea4:-soup-contains('Kategorien') + div > div > "
-                "a:-soup-contains('Hygienebekleidung')"
+                "div.LYSTypography_color_inherit__25ea4:-soup-contains('Kategorien') + div > div > a"
             )
             logger.info(f"Found {len(category_links)} category links.")
 
